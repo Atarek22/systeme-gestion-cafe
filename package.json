@@ -1,0 +1,24 @@
+{
+    "name": "systeme-gestion-cafe",
+    "version": "1.0.0",
+    "description": "Système de gestion pour un café",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "start": "tsc && node dist/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "typescript",
+        "café",
+        "gestion"
+    ],
+    "author": "Votre Nom",
+    "license": "MIT",
+    "devDependencies": {
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "fake-indexeddb": "^6.0.0"
+    }
+}
