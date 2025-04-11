@@ -45,26 +45,8 @@ Démarrez l'application :
 
 bashnpm start
 Structure du projet
-systeme-gestion-cafe/
-├── src/
-│   ├── models/
-│   │   ├── Coffee.ts
-│   │   ├── Customization.ts
-│   │   └── Order.ts
-│   ├── dao/
-│   │   ├── DAO.ts
-│   │   ├── CoffeeDAO.ts
-│   │   └── OrderDAO.ts
-│   ├── services/
-│   │   ├── InventoryManager.ts
-│   │   └── CafeManager.ts
-│   └── index.ts
-├── dist/
-├── diagrams/
-│   └── class-diagram.png
-├── package.json
-├── tsconfig.json
-└── README.md
+![image](https://github.com/user-attachments/assets/49ff3407-f7e0-4a33-8ae9-551ea0384ecc)
+
 Comment utiliser
 typescript// Créer une instance du gestionnaire de café
 const cafeManager = new CafeManager();
