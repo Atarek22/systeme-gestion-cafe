@@ -1,4 +1,5 @@
 Système de Gestion de Café
+
 Ce projet implémente un système de gestion complet pour un café, permettant de gérer les commandes, les ingrédients et les personnalisations de cafés.
 Architecture
 Le système est conçu selon plusieurs patrons de conception :
@@ -30,50 +31,71 @@ Installation
 
 Clonez ce dépôt :
 
-bashgit clone https://github.com/votre-nom/systeme-gestion-cafe.git
+  bashgit clone https://github.com/votre-nom/systeme-gestion-cafe.git
 
 Installez les dépendances :
 
-bashcd systeme-gestion-cafe
-npm install
+  bashcd systeme-gestion-cafe
+  npm install
 
 Compilez le projet TypeScript :
 
-bashnpm run build
+  bashnpm run build
 
 Démarrez l'application :
 
-bashnpm start
+  bashnpm start
+
+
 Structure du projet
+
+
 ![image](https://github.com/user-attachments/assets/49ff3407-f7e0-4a33-8ae9-551ea0384ecc)
 
-Comment utiliser
-typescript// Créer une instance du gestionnaire de café
-const cafeManager = new CafeManager();
+Comment utiliser typescript
+
+
+// Créer une instance du gestionnaire de café
+  const cafeManager = new CafeManager();
+
 
 // Créer un café
-const espresso = await cafeManager.createCoffee("espresso");
+  const espresso = await cafeManager.createCoffee("espresso");
+
 
 // Personnaliser le café
-const sweetEspresso = await cafeManager.customizeCoffee(espresso, "sugar");
+  const sweetEspresso = await cafeManager.customizeCoffee(espresso, "sugar");
+
 
 // Créer une nouvelle commande
-const order = await cafeManager.createOrder();
+  const order = await cafeManager.createOrder();
+
 
 // Ajouter le café à la commande
-await cafeManager.addCoffeeToOrder(order.id, sweetEspresso.id);
+  await cafeManager.addCoffeeToOrder(order.id, sweetEspresso.id);
+
 
 // Traiter la commande
-const processedOrder = await cafeManager.processOrder(order.id);
-Patrons de conception utilisés
+  const processedOrder = await cafeManager.processOrder(order.id);
+
+  
+Patrons de conception utilisés:
+
+
 Factory Pattern
-La classe CoffeeFactory permet de créer différents types de cafés sans exposer la logique d'instanciation.
+  La classe CoffeeFactory permet de créer différents types de cafés sans exposer la logique d'instanciation.
+
+
 Decorator Pattern
-Le CustomizedCoffee décore un objet Coffee existant avec des personnalisations supplémentaires sans modifier sa structure.
+  Le CustomizedCoffee décore un objet Coffee existant avec des personnalisations supplémentaires sans modifier sa structure.
+
+
 Singleton Pattern
-InventoryManager garantit une instance unique pour gérer l'inventaire des ingrédients.
+  InventoryManager garantit une instance unique pour gérer l'inventaire des ingrédients.
+
+
 DAO Pattern
-Les classes CoffeeDAO et OrderDAO encapsulent la logique d'accès aux données dans IndexedDB.
+  Les classes CoffeeDAO et OrderDAO encapsulent la logique d'accès aux données dans IndexedDB.
 
 Auteur
 TAHA EL Yacoubi
